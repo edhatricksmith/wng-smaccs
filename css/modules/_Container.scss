@@ -1,8 +1,16 @@
-.Container {
-    position: absolute;
-    left: 10%;
-    right: 10%;
-    top: 10%;
-    bottom: 10%;
-    margin: auto;
+.PageContainer {
+    display: block;
+    height: 100%;
+
+    &-inner {
+        position: absolute;
+        left: 15%;
+        right: 15%;
+        top: 15%;
+        bottom: 15%;
+        margin: auto;
+        background-color: $tertiary-color-dark;
+        border: 1px solid $tertiary-color-light;
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.4);
+    }
 }
