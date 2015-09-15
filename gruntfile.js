@@ -56,7 +56,7 @@ module.exports = function(grunt) {
         sass: {
             build: {
                 files: {
-                    'build/css/styles.min.css': 'csss/styles.scss'
+                    'build/css/styles.min.css': 'css/styles.scss'
                 }
             }
         },
