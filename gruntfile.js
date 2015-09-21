@@ -61,6 +61,16 @@ module.exports = function(grunt) {
             }
         },
 
+        connect: {
+            server: {
+                options: {
+                    port: 9000,
+                    keepalive: true,
+                    open: true
+                  }
+            }
+        },
+
         watch: {
             html: {
                 files: ['index.html'],
@@ -79,7 +89,7 @@ module.exports = function(grunt) {
     });
 
     // Default task(s).
-    grunt.registerTask('default', []);
+    grunt.registerTask('default', ['htmlhint', 'uglify', 'cssc', 'cssmin', 'sass', 'connect', 'watch']);
 
     grunt.registerTask('buildjs',  ['uglify']);
     grunt.registerTask('buildcss',  ['sass', 'cssc', 'cssmin']);
