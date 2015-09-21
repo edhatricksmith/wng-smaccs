@@ -65,7 +65,9 @@ module.exports = function(grunt) {
             server: {
                 options: {
                     port: 9000,
-                    keepalive: true,
+                    livereload: true,
+                    hostname: "0.0.0.0",
+                    keepalive: false,
                     open: true
                   }
             }
@@ -74,7 +76,10 @@ module.exports = function(grunt) {
         watch: {
             html: {
                 files: ['index.html'],
-                tasks: ['htmlhint']
+                tasks: ['htmlhint'],
+                options: {
+                  livereload: true,
+                }
             },
             js: {
                 files: ['js/base.js'],
@@ -82,7 +87,10 @@ module.exports = function(grunt) {
             },
             css: {
                 files: ['css/**/*.scss'],
-                tasks: ['buildcss']
+                tasks: ['buildcss'],
+                options: {
+                  livereload: true,
+                }
             }
         }
 
